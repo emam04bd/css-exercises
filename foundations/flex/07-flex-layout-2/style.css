@@ -10,12 +10,6 @@ body {
   color: white;
 }
 
-.footer {
-  height: 72px;
-  background: #eee;
-  color: darkmagenta;
-}
-
 .sidebar {
   width: 300px;
   background: royalblue;
@@ -26,4 +20,65 @@ body {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0,0,0,.06);
   border-radius: 4px;
+}
+
+.footer {
+  height: 72px;
+  background: #eee;
+  color: darkmagenta;
+}
+
+/* Solution */
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+}
+
+.sidebar > ul {
+  width: 200px;
+  margin: 0;
+  padding: 20px;
+  list-style-type: none;
+
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+} 
+
+li > a {
+  text-decoration: none;
+  color: #eee;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 200px;
+  margin: 20px;
+  padding: 10px;
+
+  flex-shrink: 1;
 }
